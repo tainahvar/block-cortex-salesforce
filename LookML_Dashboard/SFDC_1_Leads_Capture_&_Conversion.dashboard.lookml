@@ -791,7 +791,7 @@
   - name: Target Currency
     title: Target Currency
     type: field_filter
-    default_value: USD
+    default_value: ''
     allow_multiple_values: true
     required: false
     ui_config:
