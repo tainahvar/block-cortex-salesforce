@@ -58,6 +58,14 @@ view: case_management {
     sql: ${TABLE}.AccountType ;;
   }
 
+  dimension: origin {
+    type: string
+    sql: CASE WHEN ${TABLE}.origin = 'equatorial' THEN 'Equatorial'
+    WHEN ${TABLE}.origin = 'echo' THEN 'Echo'
+    END
+    ;;
+  }
+
   # dimension: annual_revenue {
   #   type: number
   #   sql: ${TABLE}.AnnualRevenue ;;

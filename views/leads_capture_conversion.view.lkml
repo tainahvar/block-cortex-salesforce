@@ -87,7 +87,13 @@ view: leads_capture_conversion {
     sql: ${TABLE}.LeadFirstName ;;
   }
 
-
+  dimension: origin {
+    type: string
+    sql: CASE WHEN ${TABLE}.OriginClient = 'equatorial' THEN 'Equatorial'
+          WHEN ${TABLE}.OriginClient = 'echo' THEN 'Echo'
+          END
+          ;;
+  }
 
   measure: count_of_lead_Id {
     type: count_distinct
@@ -301,8 +307,8 @@ view: leads_capture_conversion {
       url: "/dashboards/cortex_salesforce::leads_capture__conversion_details?Lead+Created+Date={{_filters['leads_capture_conversion.lead_created_date']}}&Country={{_filters['leads_capture_conversion.lead_country']}}&Lead+Owner={{_filters['leads_capture_conversion.lead_owner_name']}}&Industry={{_filters['leads_capture_conversion.lead_industry']}}&Lead+Source={{_filters['leads_capture_conversion.lead_source']}}&Target+Currency={{_filters['leads_capture_conversion.target_currency']}}"
     }
   }
-  
-  
+
+
   dimension: lead_owner_name {
     type: string
     sql: ${TABLE}.LeadOwnerName ;;

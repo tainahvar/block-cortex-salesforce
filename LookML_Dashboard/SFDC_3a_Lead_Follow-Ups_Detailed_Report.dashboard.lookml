@@ -85,6 +85,19 @@
     explore: sales_activities_engagement_opportunity_pipeline
     listens_to_filters: []
     field: sales_activities_engagement.lead_created_date_date
+  - name: Origin
+    title: Origin
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+    model: cortex_salesforce
+    explore: sales_activities_engagement
+    listens_to_filters: []
+    field: sales_activities_engagement.origin
   - name: Lead Country
     title: Lead Country
     type: field_filter

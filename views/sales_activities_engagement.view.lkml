@@ -26,6 +26,14 @@ view: sales_activities_engagement {
     sql: ${TABLE}.AccountName ;;
   }
 
+  dimension: origin {
+    type: string
+    sql: CASE WHEN ${TABLE}.OriginClient = 'equatorial' THEN 'Equatorial'
+          WHEN ${TABLE}.OriginClient = 'echo' THEN 'Echo'
+          END
+          ;;
+  }
+
   dimension: activity_id {
     type: string
     #primary_key: yes

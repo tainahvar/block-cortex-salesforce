@@ -788,6 +788,19 @@
     explore: leads_capture_conversion
     listens_to_filters: []
     field: leads_capture_conversion.lead_created_date
+  - name: Origin
+    title: Origin
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+    model: cortex_salesforce
+    explore: leads_capture_conversion
+    listens_to_filters: []
+    field: leads_capture_conversion.origin
   - name: Target Currency
     title: Target Currency
     type: field_filter

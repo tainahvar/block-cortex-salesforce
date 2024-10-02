@@ -1070,6 +1070,19 @@
     explore: opportunity_pipeline
     listens_to_filters: []
     field: opportunity_pipeline.opportunity_created_date
+  - name: Origin
+    title: Origin
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+    model: cortex_salesforce
+    explore: opportunity_pipeline
+    listens_to_filters: []
+    field: opportunity_pipeline.origin
   - name: Target Currency
     title: Target Currency
     type: field_filter

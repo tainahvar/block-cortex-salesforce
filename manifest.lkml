@@ -12,6 +12,6 @@ constant: GCP_PROJECT_ID {
 
 
 constant: SFDC_DATASET {
-  value: "cortex_reporting_sfdc_equatorial"
+  value: "cortex_ouro_reporting_sfdc"
   export: override_required
 }

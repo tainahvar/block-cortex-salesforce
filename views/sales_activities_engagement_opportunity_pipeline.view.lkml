@@ -47,6 +47,14 @@ view: sales_activities_engagement_opportunity_pipeline {
     sql: ${TABLE}.AccountOwnerId ;;
   }
 
+  dimension: origin {
+    type: string
+    sql: CASE WHEN ${TABLE}.OriginClient = 'equatorial' THEN 'Equatorial'
+          WHEN ${TABLE}.OriginClient = 'echo' THEN 'Echo'
+          END
+          ;;
+  }
+
   # dimension: account_type {
   #   type: string
   #   sql: ${TABLE}.AccountType ;;

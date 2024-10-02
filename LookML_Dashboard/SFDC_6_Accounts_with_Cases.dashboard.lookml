@@ -633,6 +633,19 @@
     explore: case_management
     listens_to_filters: []
     field: case_management.case_created_date
+  - name: Origin
+    title: Origin
+    type: field_filter
+    default_value: ''
+    allow_multiple_values: true
+    required: false
+    ui_config:
+      type: tag_list
+      display: popover
+    model: cortex_salesforce
+    explore: case_management
+    listens_to_filters: []
+    field: case_management.origin
   - name: Country
     title: Country
     type: field_filter
