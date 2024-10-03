@@ -60,8 +60,8 @@ view: case_management {
 
   dimension: origin {
     type: string
-    sql: CASE WHEN ${TABLE}.origin = 'equatorial' THEN 'Equatorial'
-    WHEN ${TABLE}.origin = 'echo' THEN 'Echo'
+    sql: CASE WHEN ${TABLE}.OriginClient = 'equatorial' THEN 'Equatorial'
+    WHEN ${TABLE}.OriginClient = 'echo' THEN 'Echo'
     END
     ;;
   }
