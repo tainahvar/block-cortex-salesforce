@@ -65,6 +65,7 @@
       Lead Created Date: leads_capture_conversion.lead_created_date
       Lead Owner: leads_capture_conversion.lead_owner_name
       Target Currency: leads_capture_conversion.target_currency
+      Origin : leads_capture_conversion.origin
     row: 0
     col: 0
     width: 24

@@ -70,6 +70,7 @@
       Opportunity Owner: sales_activities_engagement_opportunity_pipeline.user_full_name
       Overdue Days Range: sales_activities_engagement_opportunity_pipeline.overdue_days_range
       Industry: sales_activities_engagement_opportunity_pipeline.industry
+      Origin : sales_activities_engagement_opportunity_pipeline.origin
     row: 0
     col: 0
     width: 24

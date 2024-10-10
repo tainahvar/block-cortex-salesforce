@@ -93,6 +93,7 @@
       Country: opportunity_pipeline.billing_country
       Opportunity Owner: opportunity_pipeline.opportunity_owner_name
       Target Currency: opportunity_pipeline.target_currency
+      Origin : opportunity_pipeline.origin
     row: 0
     col: 0
     width: 24

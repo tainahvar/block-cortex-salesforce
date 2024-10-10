@@ -38,6 +38,7 @@
       Industry: opportunity_pipeline.industry
       Opportunity Owner: opportunity_pipeline.opportunity_owner_name
       Target Currency: opportunity_pipeline.target_currency
+      Origin : opportunity_pipeline.origin
     row: 4
     col: 12
     width: 6
@@ -73,6 +74,7 @@
       Industry: opportunity_pipeline.industry
       Opportunity Owner: opportunity_pipeline.opportunity_owner_name
       Target Currency: opportunity_pipeline.target_currency
+      Origin : opportunity_pipeline.origin
     row: 4
     col: 18
     width: 6
@@ -110,6 +112,7 @@
       Industry: opportunity_pipeline.industry
       Opportunity Owner: opportunity_pipeline.opportunity_owner_name
       Target Currency: opportunity_pipeline.target_currency
+      Origin : opportunity_pipeline.origin
     row: 4
     col: 6
     width: 6
@@ -202,6 +205,7 @@
       Industry: opportunity_pipeline.industry
       Opportunity Owner: opportunity_pipeline.opportunity_owner_name
       Target Currency: opportunity_pipeline.target_currency
+      Origin : opportunity_pipeline.origin
     row: 8
     col: 0
     width: 12
@@ -259,6 +263,7 @@
       Industry: opportunity_pipeline.industry
       Opportunity Owner: opportunity_pipeline.opportunity_owner_name
       Target Currency: opportunity_pipeline.target_currency
+      Origin : opportunity_pipeline.origin
     row: 14
     col: 16
     width: 8
@@ -315,6 +320,7 @@
       Industry: opportunity_pipeline.industry
       Opportunity Owner: opportunity_pipeline.opportunity_owner_name
       Target Currency: opportunity_pipeline.target_currency
+      Origin : opportunity_pipeline.origin
     row: 20
     col: 0
     width: 12
@@ -413,6 +419,7 @@
       Industry: opportunity_pipeline.industry
       Opportunity Owner: opportunity_pipeline.opportunity_owner_name
       Target Currency: opportunity_pipeline.target_currency
+      Origin : opportunity_pipeline.origin
     row: 14
     col: 0
     width: 8
@@ -477,6 +484,7 @@
       Industry: opportunity_pipeline.industry
       Opportunity Owner: opportunity_pipeline.opportunity_owner_name
       Target Currency: opportunity_pipeline.target_currency
+      Origin : opportunity_pipeline.origin
     row: 4
     col: 0
     width: 6
@@ -539,6 +547,7 @@
       Industry: opportunity_pipeline.industry
       Opportunity Owner: opportunity_pipeline.opportunity_owner_name
       Target Currency: opportunity_pipeline.target_currency
+      Origin : opportunity_pipeline.origin
     row: 6
     col: 0
     width: 6
@@ -576,6 +585,7 @@
       Industry: opportunity_pipeline.industry
       Opportunity Owner: opportunity_pipeline.opportunity_owner_name
       Target Currency: opportunity_pipeline.target_currency
+      Origin : opportunity_pipeline.origin
     row: 6
     col: 6
     width: 6
@@ -613,6 +623,7 @@
       Industry: opportunity_pipeline.industry
       Opportunity Owner: opportunity_pipeline.opportunity_owner_name
       Target Currency: opportunity_pipeline.target_currency
+      Origin : opportunity_pipeline.origin
     row: 6
     col: 12
     width: 6
@@ -650,6 +661,7 @@
       Industry: opportunity_pipeline.industry
       Opportunity Owner: opportunity_pipeline.opportunity_owner_name
       Target Currency: opportunity_pipeline.target_currency
+      Origin : opportunity_pipeline.origin
     row: 6
     col: 18
     width: 6
@@ -722,6 +734,7 @@
       Industry: opportunity_pipeline.industry
       Opportunity Owner: opportunity_pipeline.opportunity_owner_name
       Target Currency: opportunity_pipeline.target_currency
+      Origin : opportunity_pipeline.origin
     row: 20
     col: 12
     width: 12
@@ -861,6 +874,7 @@
       Opportunity Owner: opportunity_pipeline.opportunity_owner_name
       Opportunity Closed Date: opportunity_pipeline.opportunity_closed_date
       Target Currency: opportunity_pipeline.target_currency
+      Origin : opportunity_pipeline.origin
     row: 8
     col: 12
     width: 12
@@ -957,6 +971,7 @@
       Industry: opportunity_pipeline.industry
       Opportunity Owner: opportunity_pipeline.opportunity_owner_name
       Target Currency: opportunity_pipeline.target_currency
+      Origin : opportunity_pipeline.origin
     row: 14
     col: 8
     width: 8
@@ -1051,6 +1066,7 @@
       Industry: opportunity_pipeline.industry
       Opportunity Owner: opportunity_pipeline.opportunity_owner_name
       Target Currency: opportunity_pipeline.target_currency
+      Origin : opportunity_pipeline.origin
     row: 25
     col: 0
     width: 24

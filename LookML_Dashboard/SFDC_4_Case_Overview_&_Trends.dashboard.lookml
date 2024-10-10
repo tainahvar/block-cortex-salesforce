@@ -36,6 +36,7 @@
       Case Type: case_management.case_type
       Account Name: case_management.account_name
       Case Owner: case_management.case_owner_name
+      Origin : case_management.origin
     row: 4
     col: 0
     width: 6
@@ -87,6 +88,7 @@
       Case Type: case_management.case_type
       Account Name: case_management.account_name
       Case Owner: case_management.case_owner_name
+      Origin : case_management.origin
     row: 4
     col: 6
     width: 6
@@ -132,6 +134,7 @@
       Case Type: case_management.case_type
       Account Name: case_management.account_name
       Case Owner: case_management.case_owner_name
+      Origin : case_management.origin
     row: 4
     col: 12
     width: 6
@@ -222,6 +225,7 @@
       Case Type: case_management.case_type
       Account Name: case_management.account_name
       Case Owner: case_management.case_owner_name
+      Origin : case_management.origin
     row: 7
     col: 16
     width: 8
@@ -266,6 +270,7 @@
       Case Type: case_management.case_type
       Account Name: case_management.account_name
       Case Owner: case_management.case_owner_name
+      Origin : case_management.origin
     row: 7
     col: 8
     width: 8
@@ -345,6 +350,7 @@
       Case Type: case_management.case_type
       Account Name: case_management.account_name
       Case Owner: case_management.case_owner_name
+      Origin : case_management.origin
     row: 7
     col: 0
     width: 8
@@ -508,6 +514,7 @@
       Case Type: case_management.case_type
       Account Name: case_management.account_name
       Case Owner: case_management.case_owner_name
+      Origin : case_management.origin
     row: 13
     col: 0
     width: 24
@@ -552,6 +559,7 @@
       Case Type: case_management.case_type
       Account Name: case_management.account_name
       Case Owner: case_management.case_owner_name
+      Origin : case_management.origin
     row: 4
     col: 18
     width: 6

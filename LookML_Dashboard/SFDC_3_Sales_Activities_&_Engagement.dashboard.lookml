@@ -95,6 +95,7 @@
       Country: sales_activities_engagement.lead_country
       Created Date: sales_activities_engagement.lead_created_date_date
       Industry: sales_activities_engagement.lead_industry
+      Origin : sales_activities_engagement.origin
     row: 4
     col: 6
     width: 6
@@ -224,6 +225,7 @@
       Created Date: sales_activities_engagement_opportunity_pipeline.opportunity_created_date
       Industry: sales_activities_engagement_opportunity_pipeline.industry
       Target Currency: sales_activities_engagement_opportunity_pipeline.target_currency
+      Origin : sales_activities_engagement.origin
     row: 21
     col: 0
     width: 12
@@ -311,6 +313,7 @@
       Created Date: sales_activities_engagement_opportunity_pipeline.opportunity_created_date
       Industry: sales_activities_engagement_opportunity_pipeline.industry
       Target Currency: sales_activities_engagement_opportunity_pipeline.target_currency
+      Origin : sales_activities_engagement.origin
     row: 27
     col: 0
     width: 24
@@ -404,6 +407,7 @@
       Country: sales_activities_engagement.account_lead_country
       Created Date: sales_activities_engagement.lead_opportunity_created_date_date
       Industry: sales_activities_engagement.account_lead_industry
+      Origin : sales_activities_engagement.origin
     row: 14
     col: 0
     width: 8
@@ -506,6 +510,7 @@
       Country: sales_activities_engagement.account_country
       Created Date: sales_activities_engagement.opportunity_created_date
       Industry: sales_activities_engagement.account_industry
+      Origin : sales_activities_engagement.origin
     row: 6
     col: 6
     width: 6
@@ -641,6 +646,7 @@
       Country: sales_activities_engagement.account_country
       Created Date: sales_activities_engagement.opportunity_created_date
       Industry: sales_activities_engagement.account_industry
+      Origin : sales_activities_engagement.origin
     row: 8
     col: 12
     width: 12
@@ -745,6 +751,7 @@
       Country: sales_activities_engagement.account_country
       Created Date: sales_activities_engagement.opportunity_created_date
       Industry: sales_activities_engagement.account_industry
+      Origin : sales_activities_engagement.origin
     row: 6
     col: 0
     width: 6
@@ -825,6 +832,7 @@
       Created Date: sales_activities_engagement_opportunity_pipeline.opportunity_created_date
       Industry: sales_activities_engagement_opportunity_pipeline.industry
       Target Currency: sales_activities_engagement_opportunity_pipeline.target_currency
+      Origin : sales_activities_engagement.origin
     row: 21
     col: 12
     width: 12
@@ -927,6 +935,7 @@
       Country: sales_activities_engagement.account_country
       Created Date: sales_activities_engagement.opportunity_created_date
       Industry: sales_activities_engagement.account_industry
+      Origin : sales_activities_engagement.origin
     row: 6
     col: 18
     width: 6
@@ -1029,6 +1038,7 @@
       Country: sales_activities_engagement.account_country
       Created Date: sales_activities_engagement.opportunity_created_date
       Industry: sales_activities_engagement.account_industry
+      Origin : sales_activities_engagement.origin
     row: 6
     col: 12
     width: 6
@@ -1122,6 +1132,7 @@
       Country: sales_activities_engagement.lead_country
       Created Date: sales_activities_engagement.lead_created_date_date
       Industry: sales_activities_engagement.lead_industry
+      Origin : sales_activities_engagement.origin
     row: 4
     col: 0
     width: 6
@@ -1215,6 +1226,7 @@
       Country: sales_activities_engagement.lead_country
       Created Date: sales_activities_engagement.lead_created_date_date
       Industry: sales_activities_engagement.lead_industry
+      Origin : sales_activities_engagement.origin
     row: 4
     col: 12
     width: 6
@@ -1308,6 +1320,7 @@
       Country: sales_activities_engagement.lead_country
       Created Date: sales_activities_engagement.lead_created_date_date
       Industry: sales_activities_engagement.lead_industry
+      Origin : sales_activities_engagement.origin
     row: 4
     col: 18
     width: 6
@@ -1423,6 +1436,7 @@
       Country: sales_activities_engagement.lead_country
       Created Date: sales_activities_engagement.lead_created_date_date
       Industry: sales_activities_engagement.lead_industry
+      Origin : sales_activities_engagement.origin
     row: 8
     col: 0
     width: 12
@@ -1503,6 +1517,7 @@
       Created Date: sales_activities_engagement_opportunity_pipeline.opportunity_created_date
       Industry: sales_activities_engagement_opportunity_pipeline.industry
       Target Currency: sales_activities_engagement_opportunity_pipeline.target_currency
+      Origin : sales_activities_engagement.origin
     row: 14
     col: 16
     width: 8
@@ -1584,6 +1599,7 @@
       Created Date: sales_activities_engagement_opportunity_pipeline.opportunity_created_date
       Industry: sales_activities_engagement_opportunity_pipeline.industry
       Target Currency: sales_activities_engagement_opportunity_pipeline.target_currency
+      Origin : sales_activities_engagement.origin
     row: 14
     col: 8
     width: 8

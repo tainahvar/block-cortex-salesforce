@@ -66,6 +66,7 @@
       Lead Industry: sales_activities_engagement.lead_industry
       Lead Status: sales_activities_engagement.lead_status
       Lead Is Converted (Yes / No): sales_activities_engagement.is_converted
+      Origin : sales_activities_engagement.origin
     row: 0
     col: 0
     width: 24

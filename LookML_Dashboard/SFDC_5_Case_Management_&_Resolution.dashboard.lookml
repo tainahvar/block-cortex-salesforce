@@ -87,6 +87,7 @@
       Case Type: case_management.case_type
       Account Name: case_management.account_name
       Case Owner: case_management.case_owner_name
+      Origin : case_management.origin
     row: 13
     col: 5
     width: 7
@@ -182,6 +183,7 @@
       Case Type: case_management.case_type
       Account Name: case_management.account_name
       Case Owner: case_management.case_owner_name
+      Origin : case_management.origin
     row: 13
     col: 18
     width: 6
@@ -267,6 +269,7 @@
       Case Type: case_management.case_type
       Account Name: case_management.account_name
       Case Owner: case_management.case_owner_name
+      Origin : case_management.origin
     row: 7
     col: 12
     width: 12
@@ -363,6 +366,7 @@
       Case Type: case_management.case_type
       Account Name: case_management.account_name
       Case Owner: case_management.case_owner_name
+      Origin : case_management.origin
     row: 13
     col: 12
     width: 6
@@ -429,6 +433,7 @@
       Case Type: case_management.case_type
       Account Name: case_management.account_name
       Case Owner: case_management.case_owner_name
+      Origin : case_management.origin
     row: 20
     col: 0
     width: 24
@@ -484,6 +489,7 @@
       Case Type: case_management.case_type
       Account Name: case_management.account_name
       Case Owner: case_management.case_owner_name
+      Origin : case_management.origin
     row: 4
     col: 8
     width: 8
@@ -540,6 +546,7 @@
       Case Type: case_management.case_type
       Account Name: case_management.account_name
       Case Owner: case_management.case_owner_name
+      Origin : case_management.origin
     row: 4
     col: 16
     width: 8
@@ -644,6 +651,7 @@
       Case Type: case_management.case_type
       Account Name: case_management.account_name
       Case Owner: case_management.case_owner_name
+      Origin : case_management.origin
     row: 4
     col: 0
     width: 8
@@ -756,6 +764,7 @@
       Case Type: case_management.case_type
       Account Name: case_management.account_name
       Case Owner: case_management.case_owner_name
+      Origin : case_management.origin
     row: 7
     col: 0
     width: 12
@@ -815,6 +824,7 @@
       Case Type: case_management.case_type
       Account Name: case_management.account_name
       Case Owner: case_management.case_owner_name
+      Origin : case_management.origin
     row: 13
     col: 0
     width: 5

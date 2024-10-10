@@ -60,6 +60,7 @@
       Lead Source: leads_capture_conversion.lead_source
       Lead Owner: leads_capture_conversion.lead_owner_name
       Target Currency: leads_capture_conversion.target_currency
+      Origin : leads_capture_conversion.origin
     row: 4
     col: 0
     width: 6
@@ -94,6 +95,7 @@
       Lead Source: leads_capture_conversion.lead_source
       Lead Owner: leads_capture_conversion.lead_owner_name
       Target Currency: leads_capture_conversion.target_currency
+      Origin : leads_capture_conversion.origin
     row: 4
     col: 6
     width: 6
@@ -222,6 +224,7 @@
       Lead Source: leads_capture_conversion.lead_source
       Lead Owner: leads_capture_conversion.lead_owner_name
       Target Currency: leads_capture_conversion.target_currency
+      Origin : leads_capture_conversion.origin
     row: 7
     col: 8
     width: 8
@@ -281,6 +284,7 @@
       Lead Source: leads_capture_conversion.lead_source
       Lead Owner: leads_capture_conversion.lead_owner_name
       Target Currency: leads_capture_conversion.target_currency
+      Origin : leads_capture_conversion.origin
     row: 7
     col: 0
     width: 8
@@ -357,6 +361,7 @@
       Lead Source: leads_capture_conversion.lead_source
       Lead Owner: leads_capture_conversion.lead_owner_name
       Target Currency: leads_capture_conversion.target_currency
+      Origin : leads_capture_conversion.origin
     row: 13
     col: 0
     width: 8
@@ -444,6 +449,7 @@
       Lead Source: leads_capture_conversion.lead_source
       Lead Owner: leads_capture_conversion.lead_owner_name
       Target Currency: leads_capture_conversion.target_currency
+      Origin : leads_capture_conversion.origin
     row: 13
     col: 16
     width: 8
@@ -559,6 +565,7 @@
       Lead Source: leads_capture_conversion.lead_source
       Lead Owner: leads_capture_conversion.lead_owner_name
       Target Currency: leads_capture_conversion.target_currency
+      Origin : leads_capture_conversion.origin
     row: 13
     col: 8
     width: 8
@@ -629,6 +636,7 @@
       Lead Source: leads_capture_conversion.lead_source
       Lead Owner: leads_capture_conversion.lead_owner_name
       Target Currency: leads_capture_conversion.target_currency
+      Origin : leads_capture_conversion.origin
     row: 4
     col: 12
     width: 6
@@ -676,6 +684,7 @@
       Lead Source: leads_capture_conversion.lead_source
       Lead Owner: leads_capture_conversion.lead_owner_name
       Target Currency: leads_capture_conversion.target_currency
+      Origin : leads_capture_conversion.origin
     row: 4
     col: 18
     width: 6
@@ -769,6 +778,7 @@
       Lead Source: leads_capture_conversion.lead_source
       Lead Owner: leads_capture_conversion.lead_owner_name
       Target Currency: leads_capture_conversion.target_currency
+      Origin : leads_capture_conversion.origin
     row: 7
     col: 16
     width: 8

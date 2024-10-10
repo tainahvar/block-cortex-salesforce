@@ -68,6 +68,7 @@
       Activity Status: sales_activities_engagement.status
       Opportunity Is Closed (Yes / No): sales_activities_engagement.is_closed
       Opportunity Is Won (Yes / No): sales_activities_engagement.is_won
+      Origin : sales_activities_engagement.origin
     row: 0
     col: 0
     width: 24

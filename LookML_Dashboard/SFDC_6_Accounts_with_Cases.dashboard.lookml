@@ -62,6 +62,7 @@
       Case Type: case_management.case_type
       Case Origin: case_management.case_origin
       Case Owner: case_management.case_owner_name
+      Origin : case_management.origin
     row: 7
     col: 0
     width: 8
@@ -123,6 +124,7 @@
       Case Type: case_management.case_type
       Case Origin: case_management.case_origin
       Case Owner: case_management.case_owner_name
+      Origin : case_management.origin
     row: 13
     col: 16
     width: 8
@@ -185,6 +187,7 @@
       Case Type: case_management.case_type
       Case Origin: case_management.case_origin
       Case Owner: case_management.case_owner_name
+      Origin : case_management.origin
     row: 13
     col: 0
     width: 8
@@ -250,6 +253,7 @@
       Case Type: case_management.case_type
       Case Origin: case_management.case_origin
       Case Owner: case_management.case_owner_name
+      Origin : case_management.origin
     row: 7
     col: 16
     width: 8
@@ -285,6 +289,7 @@
       Case Type: case_management.case_type
       Case Origin: case_management.case_origin
       Case Owner: case_management.case_owner_name
+      Origin : case_management.origin
     row: 4
     col: 0
     width: 8
@@ -336,6 +341,7 @@
       Case Type: case_management.case_type
       Case Origin: case_management.case_origin
       Case Owner: case_management.case_owner_name
+      Origin : case_management.origin
     row: 4
     col: 8
     width: 8
@@ -388,6 +394,7 @@
       Case Type: case_management.case_type
       Case Origin: case_management.case_origin
       Case Owner: case_management.case_owner_name
+      Origin : case_management.origin
     row: 4
     col: 16
     width: 8
@@ -536,6 +543,7 @@
       Case Type: case_management.case_type
       Case Origin: case_management.case_origin
       Case Owner: case_management.case_owner_name
+      Origin : case_management.origin
     row: 13
     col: 8
     width: 8
@@ -614,6 +622,7 @@
       Case Type: case_management.case_type
       Case Origin: case_management.case_origin
       Case Owner: case_management.case_owner_name
+      Origin : case_management.origin
     row: 7
     col: 8
     width: 8
