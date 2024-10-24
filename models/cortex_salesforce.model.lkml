@@ -49,6 +49,7 @@ explore: opportunity_pipeline {}
 
 explore: leads_capture_conversion {}
 
+explore: cases {}
 
 explore:sales_activities_engagement  {
 join: sales_rep {
@@ -102,6 +103,3 @@ explore: sales_activities_engagement_opportunity_pipeline {
     relationship: one_to_many
   }
 }
-
-
-
