@@ -44,6 +44,7 @@ view: cases {
   measure: total_case_closed_month {
     type: sum
     sql: ${case_closed_month} ;;  }
+
   measure: average_case_closed_month {
     type: average
     sql: ${case_closed_month} ;;  }
