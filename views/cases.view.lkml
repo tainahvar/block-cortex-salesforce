@@ -48,6 +48,10 @@ view: cases {
     type: average
     sql: ${case_closed_month} ;;  }
 
+  measure: total_case {
+    type: count_distinct
+    sql:${TABLE}.CaseNumber;;  }
+
   dimension: caseclosedquarter {
     type: string
     sql: ${TABLE}.CaseClosedQuarter ;;
@@ -262,6 +266,6 @@ view: cases {
   }
   measure: count {
     type: count
-    drill_fields: [case_id, supplied_name]
+    drill_fields: [case_number, supplied_name]
   }
 }
