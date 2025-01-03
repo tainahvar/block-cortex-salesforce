@@ -7,31 +7,37 @@ view: cases {
   derived_table: {
 
     sql:
-     SELECT if(Pai.CaseNumber  is null ,Filho.CaseNumber,Pai.CaseNumber) as  ParentCaseNumber
-           , if(Pai.CaseNumber  is null ,Filho.Subject,Pai.Subject) as  ParentSubject
-           , if(Pai.CaseNumber  is null ,Filho.Origin,Pai.Origin) as  ParentOrigin
-           , if(Pai.CaseNumber  is null ,Filho.SuppliedEmail,Pai.SuppliedEmail) as  ParentSuppliedEmail
-           , if(Pai.CaseNumber  is null ,Filho.SuppliedName,Pai.SuppliedName) as  ParentSuppliedName
-           , if(Pai.CaseNumber  is null ,Filho.Type,Pai.Type) as  ParentType
-           , if(Pai.CaseNumber  is null ,Filho.CaseCreatedDate,Pai.CaseCreatedDate) as  ParentCaseCreatedDate
-           , if(Pai.CaseNumber  is null ,Filho.CaseClosedDate,Pai.CaseClosedDate) as  ParentCaseClosedDate
-           , if(Pai.CaseNumber  is null ,Filho.Description,Pai.Description) as  ParentDescription
-           , Filho.CaseId
-           , Filho.CaseNumber
-           , Filho.CaseCreatedDate
-           , Filho.CaseClosedDate
-           , Filho.Isclosed
-           , Filho.IsEscalated
-           , Filho.Origin Origin
-           , Filho.Subject
-           , Filho.Status
-           , Filho.SuppliedEmail
-           , Filho.SuppliedName
-           , Filho.Type
-           , Filho.Description
-        FROM  `@{GCP_PROJECT_ID}.@{SFDC_DATASET}.Cases` Filho
-    LEFT JOIN `@{GCP_PROJECT_ID}.@{SFDC_DATASET}.Cases` Pai on Filho.ParentId = Pai.CaseId
+    select * except(ParentDescription,Description),
+          ltrim(substring(ParentDescription, 173 , length(ParentDescription)-173 )) ParentDescription,
+          ltrim(substring(Description, 173 , length(Description)-173 )) Description,
 
+    from
+    (
+       SELECT if(Pai.CaseNumber  is null ,Filho.CaseNumber,Pai.CaseNumber) as  ParentCaseNumber
+             , if(Pai.CaseNumber  is null ,Filho.Subject,Pai.Subject) as  ParentSubject
+             , if(Pai.CaseNumber  is null ,Filho.Origin,Pai.Origin) as  ParentOrigin
+             , if(Pai.CaseNumber  is null ,Filho.SuppliedEmail,Pai.SuppliedEmail) as  ParentSuppliedEmail
+             , if(Pai.CaseNumber  is null ,Filho.SuppliedName,Pai.SuppliedName) as  ParentSuppliedName
+             , if(Pai.CaseNumber  is null ,Filho.Type,Pai.Type) as  ParentType
+             , if(Pai.CaseNumber  is null ,Filho.CaseCreatedDate,Pai.CaseCreatedDate) as  ParentCaseCreatedDate
+             , if(Pai.CaseNumber  is null ,Filho.CaseClosedDate,Pai.CaseClosedDate) as  ParentCaseClosedDate
+             , if(Pai.CaseNumber  is null ,Filho.Description,Pai.Description) as  ParentDescription
+             , Filho.CaseId
+             , Filho.CaseNumber
+             , Filho.CaseCreatedDate
+             , Filho.CaseClosedDate
+             , Filho.Isclosed
+             , Filho.IsEscalated
+             , Filho.Origin Origin
+             , Filho.Subject
+             , Filho.Status
+             , Filho.SuppliedEmail
+             , Filho.SuppliedName
+             , Filho.Type
+             , Filho.Description
+          FROM  `@{GCP_PROJECT_ID}.@{SFDC_DATASET}.Cases` Filho
+      LEFT JOIN `@{GCP_PROJECT_ID}.@{SFDC_DATASET}.Cases` Pai on Filho.ParentId = Pai.CaseId
+    )
 
       ;;
 
