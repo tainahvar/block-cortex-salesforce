@@ -242,6 +242,7 @@ view: cases {
   }
 
   dimension: subject {
+    label: "Assunto"
     type: string
     sql: ${TABLE}.Subject ;;
   }
@@ -252,7 +253,7 @@ view: cases {
   }
 
   dimension: supplied_email {
-    label: "E-mail Fornecido"
+    label: "E-mail"
     type: string
     sql: ${TABLE}.SuppliedEmail ;;
   }
