@@ -31,7 +31,6 @@ view: cases {
     LEFT JOIN `@{GCP_PROJECT_ID}.@{SFDC_DATASET}.Cases` Pai on Filho.ParentId = Pai.CaseId
 
 
-
       ;;
 
   }
@@ -46,6 +45,12 @@ view: cases {
     label: "Assunto (caso pai)"
     type: string
     sql: ${TABLE}.ParentSubject ;;
+  }
+
+  dimension: parent_supplied_name {
+    label: "Remetente (caso pai)"
+    type: string
+    sql: ${TABLE}.ParentSuppliedName ;;
   }
 
   dimension: parent_supplied_email {
