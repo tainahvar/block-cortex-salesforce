@@ -15,6 +15,7 @@ view: cases {
            , if(Pai.CaseNumber  is null ,Filho.Type,Pai.Type) as  ParentType
            , if(Pai.CaseNumber  is null ,Filho.CaseCreatedDate,Pai.CaseCreatedDate) as  ParentCaseCreatedDate
            , if(Pai.CaseNumber  is null ,Filho.CaseClosedDate,Pai.CaseClosedDate) as  ParentCaseClosedDate
+           , if(Pai.CaseNumber  is null ,Filho.Description,Pai.Description) as  ParentDescription
            , Filho.CaseId
            , Filho.CaseNumber
            , Filho.CaseCreatedDate
@@ -27,6 +28,7 @@ view: cases {
            , Filho.SuppliedEmail
            , Filho.SuppliedName
            , Filho.Type
+           , Filho.Description
         FROM  `@{GCP_PROJECT_ID}.@{SFDC_DATASET}.Cases` Filho
     LEFT JOIN `@{GCP_PROJECT_ID}.@{SFDC_DATASET}.Cases` Pai on Filho.ParentId = Pai.CaseId
 
@@ -47,6 +49,13 @@ view: cases {
     type: string
     sql: ${TABLE}.ParentSubject ;;
   }
+
+  dimension: parent_description {
+    label: "Conteudo e-email (caso pai)"
+    type: string
+    sql: ${TABLE}.ParentDescription ;;
+  }
+
 
   dimension: parent_supplied_name {
     label: "Remetente (caso pai)"
@@ -135,6 +144,13 @@ view: cases {
     type: string
     sql: ${TABLE}.Subject ;;
   }
+
+  dimension: description {
+    label: "Conteudo e-email"
+    type: string
+    sql: ${TABLE}.Description ;;
+  }
+
 
   dimension: supplied_email {
     label: "E-mail"
