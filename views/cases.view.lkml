@@ -178,13 +178,13 @@ view: cases {
     label: "N° de casos"
     type: count_distinct
     sql:${TABLE}.CaseNumber;;
-    drill_fields: [case_number,parent_case_number, supplied_name,supplied_email,subject,description]
+    drill_fields: [case_number,case_created_date,parent_case_number, supplied_name,supplied_email,subject,description]
   }
 
   measure: total_case_pai {
     label: "N° de casos (pai)"
     type: count_distinct
     sql: ${TABLE}.ParentCaseNumber  ;;
-    drill_fields: [parent_case_number, parent_supplied_name,parent_supplied_email,parent_subject,parent_description]
+    drill_fields: [parent_case_number,parent_case_created_date, parent_supplied_name,parent_supplied_email,parent_subject,parent_description]
     }
 }
