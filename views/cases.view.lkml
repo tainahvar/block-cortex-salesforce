@@ -53,6 +53,10 @@ view: cases {
     type: count_distinct
     sql:${TABLE}.CaseNumber;;  }
 
+  measure: total_case_pai {
+    type: count_distinct
+    sql: if(${TABLE}.ParentId ='',${TABLE}.CaseId,${TABLE}.ParentId) ;;  }
+
   dimension: caseclosedquarter {
     type: string
     sql: ${TABLE}.CaseClosedQuarter ;;
