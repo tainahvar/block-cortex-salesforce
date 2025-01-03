@@ -39,6 +39,7 @@ view: cases {
     label: "Num. Caso (pai)"
     type: string
     sql: ${TABLE}.ParentCaseNumber ;;
+    drill_fields: [case_number,parent_case_number, supplied_name,supplied_email,subject]
   }
 
   dimension: parent_subject {
