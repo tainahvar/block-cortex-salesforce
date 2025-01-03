@@ -54,6 +54,7 @@ view: cases {
     sql:${TABLE}.CaseNumber;;  }
 
   measure: total_case_pai {
+    label: "N° de casos"
     type: count_distinct
     sql: if(${TABLE}.ParentId ='',${TABLE}.CaseId,${TABLE}.ParentId) ;;  }
 
