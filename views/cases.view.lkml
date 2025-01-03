@@ -175,7 +175,7 @@ view: cases {
   }
 
   measure: total_case {
-    label: "N° de casos"
+    label: "Interações"
     type: count_distinct
     sql:${TABLE}.CaseNumber;;
     drill_fields: [case_number,case_created_date,parent_case_number, supplied_name,supplied_email,subject,description]
