@@ -8,8 +8,8 @@ view: cases {
 
     sql:
     select * except(ParentDescription,Description),
-          ltrim(substring(ParentDescription, 173 , length(ParentDescription)-173 )) ParentDescription,
-          ltrim(substring(Description, 173 , length(Description)-173 )) Description,
+           if(length(ltrim(rtrim(ParentDescription)))>180, ltrim(substring(ParentDescription, 173 , length(ParentDescription)-173)),ParentDescription) ParentDescription,
+          if(length(ltrim(rtrim(Description)))>180, ltrim(substring(Description, 173 , length(Description)-173 )),Description) Description,
 
     from
     (
