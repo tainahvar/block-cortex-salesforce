@@ -41,7 +41,6 @@ view: cases {
     label: "Num. Caso (pai)"
     type: string
     sql: ${TABLE}.ParentCaseNumber ;;
-    drill_fields: [case_number,supplied_name,supplied_email,subject]
   }
 
   dimension: parent_subject {
@@ -173,13 +172,13 @@ view: cases {
     label: "N° de casos"
     type: count_distinct
     sql:${TABLE}.CaseNumber;;
-    drill_fields: [case_number,parent_case_number, supplied_name,supplied_email,subject]
+    drill_fields: [case_number,parent_case_number, supplied_name,supplied_email,subject,description]
   }
 
   measure: total_case_pai {
     label: "N° de casos (pai)"
     type: count_distinct
     sql: ${TABLE}.ParentCaseNumber  ;;
-    drill_fields: [parent_case_number, parent_supplied_name,parent_supplied_email,parent_subject]
+    drill_fields: [parent_case_number, parent_supplied_name,parent_supplied_email,parent_subject,parent_description]
     }
 }
