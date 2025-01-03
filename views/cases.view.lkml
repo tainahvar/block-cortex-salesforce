@@ -252,6 +252,7 @@ view: cases {
   }
 
   dimension: supplied_email {
+    label: "E-mail Fornecido"
     type: string
     sql: ${TABLE}.SuppliedEmail ;;
   }
