@@ -41,6 +41,37 @@ view: cases {
       , Filho.ConsultantEmail
       , Filho.ConsultantName
       , Filho.Portfolio
+      ,  SELECT if(Pai.CaseNumber  is null ,Filho.CaseNumber,Pai.CaseNumber) as  ParentCaseNumber
+      , if(Pai.CaseNumber  is null ,Filho.Subject,Pai.Subject) as  ParentSubject
+      , if(Pai.CaseNumber  is null ,Filho.Origin,Pai.Origin) as  ParentOrigin
+      , ltrim(rtrim(if(Pai.CaseNumber  is null ,Filho.SuppliedEmail,Pai.SuppliedEmail))) as  ParentSuppliedEmail
+      , if(Pai.CaseNumber  is null ,Filho.SuppliedName,Pai.SuppliedName) as  ParentSuppliedName
+      , if(Pai.CaseNumber  is null ,Filho.Type,Pai.Type) as  ParentType
+      , if(Pai.CaseNumber  is null ,Filho.CaseCreatedDate,Pai.CaseCreatedDate) as  ParentCaseCreatedDate
+      , if(Pai.CaseNumber  is null ,Filho.CaseClosedDate,Pai.CaseClosedDate) as  ParentCaseClosedDate
+      , if(Pai.CaseNumber  is null ,Filho.Description,Pai.Description) as  ParentDescription
+      , if(Pai.CaseNumber  is null ,Filho.ConsultantEmail,Pai.ConsultantEmail) as  ParentConsultantEmail
+      , replace(if(Pai.CaseNumber  is null ,Filho.ConsultantName,Pai.ConsultantName),'@equatorialenergia.com.br','') as  ParentConsultantName
+      , if(Pai.CaseNumber  is null ,Filho.Portfolio,Pai.Portfolio) as  ParentPortfolio
+      , Filho.CaseId
+      , Filho.CaseNumber
+      , Filho.CaseCreatedDate
+      , Filho.CaseClosedDate
+      , Filho.Isclosed
+      , Filho.IsEscalated
+      , Filho.Origin Origin
+      , Filho.Subject
+      , Filho.Status
+      , Filho.SuppliedEmail
+      , Filho.SuppliedName
+      , Filho.Type
+      , Filho.Description
+      , Filho.ConsultantEmail
+      , replace(Filho.ConsultantName,'@equatorialenergia.com.br','') as ConsultantName
+      , Filho.Portfolio
+      , DATE_DIFF(Filho.CaseClosedDate, Filho.CaseCreatedDate, day) dias
+      FROM  `cdp-eqtl-servico.cortex_ouro_reporting_sfdc.Cases` Filho
+      LEFT JOIN `cdp-eqtl-servico.cortex_ouro_reporting_sfdc.Cases` Pai on Filho.ParentId = Pai.CaseId
       FROM  `@{GCP_PROJECT_ID}.@{SFDC_DATASET}.Cases` Filho
       LEFT JOIN `@{GCP_PROJECT_ID}.@{SFDC_DATASET}.Cases` Pai on Filho.ParentId = Pai.CaseId
       )
