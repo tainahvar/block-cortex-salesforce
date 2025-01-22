@@ -16,7 +16,7 @@ view: cases {
       SELECT if(Pai.CaseNumber  is null ,Filho.CaseNumber,Pai.CaseNumber) as  ParentCaseNumber
       , if(Pai.CaseNumber  is null ,Filho.Subject,Pai.Subject) as  ParentSubject
       , if(Pai.CaseNumber  is null ,Filho.Origin,Pai.Origin) as  ParentOrigin
-      , if(Pai.CaseNumber  is null ,Filho.SuppliedEmail,Pai.SuppliedEmail) as  ParentSuppliedEmail
+      , ltrim(rtrim(if(Pai.CaseNumber  is null ,Filho.SuppliedEmail,Pai.SuppliedEmail))) as  ParentSuppliedEmail
       , if(Pai.CaseNumber  is null ,Filho.SuppliedName,Pai.SuppliedName) as  ParentSuppliedName
       , if(Pai.CaseNumber  is null ,Filho.Type,Pai.Type) as  ParentType
       , if(Pai.CaseNumber  is null ,Filho.CaseCreatedDate,Pai.CaseCreatedDate) as  ParentCaseCreatedDate
