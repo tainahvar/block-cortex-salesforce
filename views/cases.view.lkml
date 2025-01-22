@@ -224,6 +224,7 @@ view: cases {
     sql:${TABLE}.CaseNumber;;
     drill_fields: [case_number,case_created_date,parent_case_number, supplied_name,supplied_email,subject,description]
   }
+
   measure: dias_em_aberto {
     label: "Dias em aberto"
     type: sum
