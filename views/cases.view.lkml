@@ -232,6 +232,13 @@ view: cases {
     drill_fields: [case_number,case_created_date,parent_case_number, supplied_name,supplied_email,subject,description]
   }
 
+  measure: media_dias_em_aberto {
+    label: "Dias em aberto (média)"
+    type: average
+    sql:${TABLE}.dias_em_aberto;;
+    drill_fields: [case_number,case_created_date,parent_case_number, supplied_name,supplied_email,subject,description]
+  }
+
   measure: total_case_pai {
     label: "N° de casos (pai)"
     type: count_distinct
