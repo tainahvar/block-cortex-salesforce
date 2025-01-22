@@ -11,33 +11,39 @@ view: cases {
            if(length(ltrim(rtrim(ParentDescription)))>173, ltrim(substring(ParentDescription, 173 , length(ParentDescription)-173)),null) ParentDescription,
           if(length(ltrim(rtrim(Description)))>173, ltrim(substring(Description, 173 , length(Description)-173 )),null) Description,
 
-    from
-    (
-       SELECT if(Pai.CaseNumber  is null ,Filho.CaseNumber,Pai.CaseNumber) as  ParentCaseNumber
-             , if(Pai.CaseNumber  is null ,Filho.Subject,Pai.Subject) as  ParentSubject
-             , if(Pai.CaseNumber  is null ,Filho.Origin,Pai.Origin) as  ParentOrigin
-             , if(Pai.CaseNumber  is null ,Filho.SuppliedEmail,Pai.SuppliedEmail) as  ParentSuppliedEmail
-             , if(Pai.CaseNumber  is null ,Filho.SuppliedName,Pai.SuppliedName) as  ParentSuppliedName
-             , if(Pai.CaseNumber  is null ,Filho.Type,Pai.Type) as  ParentType
-             , if(Pai.CaseNumber  is null ,Filho.CaseCreatedDate,Pai.CaseCreatedDate) as  ParentCaseCreatedDate
-             , if(Pai.CaseNumber  is null ,Filho.CaseClosedDate,Pai.CaseClosedDate) as  ParentCaseClosedDate
-             , if(Pai.CaseNumber  is null ,Filho.Description,Pai.Description) as  ParentDescription
-             , Filho.CaseId
-             , Filho.CaseNumber
-             , Filho.CaseCreatedDate
-             , Filho.CaseClosedDate
-             , Filho.Isclosed
-             , Filho.IsEscalated
-             , Filho.Origin Origin
-             , Filho.Subject
-             , Filho.Status
-             , Filho.SuppliedEmail
-             , Filho.SuppliedName
-             , Filho.Type
-             , Filho.Description
-          FROM  `@{GCP_PROJECT_ID}.@{SFDC_DATASET}.Cases` Filho
+      from
+      (
+      SELECT if(Pai.CaseNumber  is null ,Filho.CaseNumber,Pai.CaseNumber) as  ParentCaseNumber
+      , if(Pai.CaseNumber  is null ,Filho.Subject,Pai.Subject) as  ParentSubject
+      , if(Pai.CaseNumber  is null ,Filho.Origin,Pai.Origin) as  ParentOrigin
+      , if(Pai.CaseNumber  is null ,Filho.SuppliedEmail,Pai.SuppliedEmail) as  ParentSuppliedEmail
+      , if(Pai.CaseNumber  is null ,Filho.SuppliedName,Pai.SuppliedName) as  ParentSuppliedName
+      , if(Pai.CaseNumber  is null ,Filho.Type,Pai.Type) as  ParentType
+      , if(Pai.CaseNumber  is null ,Filho.CaseCreatedDate,Pai.CaseCreatedDate) as  ParentCaseCreatedDate
+      , if(Pai.CaseNumber  is null ,Filho.CaseClosedDate,Pai.CaseClosedDate) as  ParentCaseClosedDate
+      , if(Pai.CaseNumber  is null ,Filho.Description,Pai.Description) as  ParentDescription
+      , if(Pai.CaseNumber  is null ,Filho.ConsultantEmail,Pai.ConsultantEmail) as  ParentConsultantEmail
+      , if(Pai.CaseNumber  is null ,Filho.ConsultantName,Pai.ConsultantName) as  ParentConsultantName
+      , if(Pai.CaseNumber  is null ,Filho.Portfolio,Pai.Portfolio) as  ParentPortfolio
+      , Filho.CaseId
+      , Filho.CaseNumber
+      , Filho.CaseCreatedDate
+      , Filho.CaseClosedDate
+      , Filho.Isclosed
+      , Filho.IsEscalated
+      , Filho.Origin Origin
+      , Filho.Subject
+      , Filho.Status
+      , Filho.SuppliedEmail
+      , Filho.SuppliedName
+      , Filho.Type
+      , Filho.Description
+      , Filho.ConsultantEmail
+      , Filho.ConsultantName
+      , Filho.Portfolio
+      FROM  `@{GCP_PROJECT_ID}.@{SFDC_DATASET}.Cases` Filho
       LEFT JOIN `@{GCP_PROJECT_ID}.@{SFDC_DATASET}.Cases` Pai on Filho.ParentId = Pai.CaseId
-    )
+      )
 
       ;;
 
@@ -72,6 +78,24 @@ view: cases {
     label: "E-mail (caso pai)"
     type: string
     sql: ${TABLE}.ParentSuppliedEmail ;;
+  }
+
+  dimension: parent_consultant_name {
+    label: "Nome Consultor (caso pai)"
+    type: string
+    sql: ${TABLE}.ParentConsultantName ;;
+  }
+
+  dimension: parent_consultant_email {
+    label: "E-mail Consultor (caso pai)"
+    type: string
+    sql: ${TABLE}.ParentConsultantEmail ;;
+  }
+
+  dimension: parent_portfolio {
+    label: "Portfolio (caso pai)"
+    type: string
+    sql: ${TABLE}.ParentPortfolio ;;
   }
 
   dimension_group: parent_case_closed {
@@ -169,6 +193,24 @@ view: cases {
     sql: ${TABLE}.SuppliedName ;;
   }
 
+  dimension: consultant_name {
+    label: "Nome Consultor"
+    type: string
+    sql: ${TABLE}.ConsultantName ;;
+  }
+
+  dimension: consultant_email {
+    label: "E-mail Consultor"
+    type: string
+    sql: ${TABLE}.ConsultantEmail ;;
+  }
+
+  dimension: portfolio {
+    label: "Portfolio"
+    type: string
+    sql: ${TABLE}.Portfolio ;;
+  }
+
   dimension: type {
     type: string
     sql: ${TABLE}.Type ;;
@@ -186,5 +228,5 @@ view: cases {
     type: count_distinct
     sql: ${TABLE}.ParentCaseNumber  ;;
     drill_fields: [parent_case_number,parent_case_created_date, parent_supplied_name,parent_supplied_email,parent_subject,parent_description]
-    }
+  }
 }
