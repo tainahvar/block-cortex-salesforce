@@ -69,7 +69,7 @@ view: cases {
       , Filho.ConsultantEmail
       , replace(Filho.ConsultantName,'@equatorialenergia.com.br','') as ConsultantName
       , Filho.Portfolio
-      , DATE_DIFF(Filho.CaseClosedDate, Filho.CaseCreatedDate, day) dias
+      , DATE_DIFF(Filho.CaseClosedDate, coalesce(Filho.CaseCreatedDate, current_date()), day) dias_em_aberto
       FROM  `cdp-eqtl-servico.cortex_ouro_reporting_sfdc.Cases` Filho
       LEFT JOIN `cdp-eqtl-servico.cortex_ouro_reporting_sfdc.Cases` Pai on Filho.ParentId = Pai.CaseId
       FROM  `@{GCP_PROJECT_ID}.@{SFDC_DATASET}.Cases` Filho
@@ -251,6 +251,12 @@ view: cases {
     label: "Interações"
     type: count_distinct
     sql:${TABLE}.CaseNumber;;
+    drill_fields: [case_number,case_created_date,parent_case_number, supplied_name,supplied_email,subject,description]
+  }
+  measure: dias_em_aberto {
+    label: "Dias em aberto"
+    type: sum
+    sql:${TABLE}.dias_em_aberto;;
     drill_fields: [case_number,case_created_date,parent_case_number, supplied_name,supplied_email,subject,description]
   }
 
