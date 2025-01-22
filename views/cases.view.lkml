@@ -23,7 +23,7 @@ view: cases {
       , if(Pai.CaseNumber  is null ,Filho.CaseClosedDate,Pai.CaseClosedDate) as  ParentCaseClosedDate
       , if(Pai.CaseNumber  is null ,Filho.Description,Pai.Description) as  ParentDescription
       , if(Pai.CaseNumber  is null ,Filho.ConsultantEmail,Pai.ConsultantEmail) as  ParentConsultantEmail
-      , if(Pai.CaseNumber  is null ,Filho.ConsultantName,Pai.ConsultantName) as  ParentConsultantName
+      , replace(if(Pai.CaseNumber  is null ,Filho.ConsultantName,Pai.ConsultantName),'@equatorialenergia.com.br','') as  ParentConsultantName
       , if(Pai.CaseNumber  is null ,Filho.Portfolio,Pai.Portfolio) as  ParentPortfolio
       , Filho.CaseId
       , Filho.CaseNumber
@@ -38,9 +38,9 @@ view: cases {
       , Filho.SuppliedName
       , Filho.Type
       , Filho.Description
-      , Filho.ConsultantEmail
-      , Filho.ConsultantName
-      , Filho.Portfolio
+      , coalesce(Filho.ConsultantEmail,Pai.ConsultantEmail) as ConsultantEmail
+      , replace(coalesce(Filho.ConsultantName,Pai.ConsultantName),'@equatorialenergia.com.br','') as ConsultantName
+      , coalesce(Filho.Portfolio,Pai.Portfolio) as Portfolio
       , DATE_DIFF(Filho.CaseClosedDate, coalesce(Filho.CaseCreatedDate, current_date()), day) dias_em_aberto
       FROM  `cdp-eqtl-servico.cortex_ouro_reporting_sfdc.Cases` Filho
       LEFT JOIN `cdp-eqtl-servico.cortex_ouro_reporting_sfdc.Cases` Pai on Filho.ParentId = Pai.CaseId
