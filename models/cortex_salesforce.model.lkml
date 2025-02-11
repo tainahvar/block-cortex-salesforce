@@ -51,7 +51,9 @@ explore: leads_capture_conversion {}
 
 explore: cases {}
 
-explore: view_indicador_tempo {}
+explore: view_indicador_tempo {
+  view_label: "Inidcador Tempos de Atendimento"
+}
 
 explore:sales_activities_engagement  {
 join: sales_rep {
