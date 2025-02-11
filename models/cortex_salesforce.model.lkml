@@ -51,6 +51,8 @@ explore: leads_capture_conversion {}
 
 explore: cases {}
 
+explore: view_indicador_tempo {}
+
 explore:sales_activities_engagement  {
 join: sales_rep {
   view_label: "SalesActivitiesUser"
