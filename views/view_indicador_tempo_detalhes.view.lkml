@@ -123,8 +123,11 @@ view: view_indicador_tempo_detalhes {
     type: string
     sql: ${TABLE}.Type ;;
   }
-  measure: count {
-    type: count
+
+  measure: qtd_casos {
+    label: "Qtd. Interações"
+    type: count_distinct
+    sql: ${case_number} ;;
     drill_fields: [case_number]
   }
 }
