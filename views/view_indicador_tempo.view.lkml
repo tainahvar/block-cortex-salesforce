@@ -1,5 +1,5 @@
 view: view_indicador_tempo {
-  sql_table_name: `cdp-eqtl-servico.cortex_ouro_reporting_sfdc.view_indicador_tempo` ;;
+  sql_table_name: `cdp-eqtl-servico.cortex_ouro_reporting_sfdc.IndicadorTempo` ;;
 
   dimension: parent_case_number {
     label: "N° Caso (pai)"
