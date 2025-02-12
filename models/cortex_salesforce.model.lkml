@@ -52,7 +52,14 @@ explore: leads_capture_conversion {}
 explore: cases {}
 
 explore: view_indicador_tempo {
-  view_label: "Inidcador Tempos de Atendimento"
+  label:"Inidcador Tempos de Atendimento"
+  view_label: "Casos Pai"
+  join:  view_indicador_tempo_detalhes{
+    view_label: "Detalhes"
+    type: left_outer
+    sql_on: ${view_indicador_tempo_detalhes.parent_case_number}=${view_indicador_tempo.parent_case_number} ;;
+    relationship: one_to_many
+  }
 }
 
 explore:sales_activities_engagement  {

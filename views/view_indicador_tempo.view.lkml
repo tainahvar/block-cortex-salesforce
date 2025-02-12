@@ -3,8 +3,10 @@ view: view_indicador_tempo {
 
   dimension: parent_case_number {
     label: "N° Caso (pai)"
+    primary_key: yes
     type: string
     sql: ${TABLE}.ParentCaseNumber ;;
+    drill_fields: [view_indicador_tempo_detalhes.case_number]
   }
 
   dimension_group: inicio_atendimento {
@@ -36,7 +38,7 @@ view: view_indicador_tempo {
   }
 
   dimension_group: data_envio_backoffice {
-    label: "Data de encaminhamento para o Backoffice"
+    label: "Encaminhado para Backoffice"
     type: time
     timeframes: [raw, time, date, week, month, quarter, year]
     datatype: datetime
@@ -44,7 +46,7 @@ view: view_indicador_tempo {
   }
 
   dimension_group: data_envio_consultor {
-    label: "Data de encaminhamento para o Consultor"
+    label: "Encaminhado para Consultor"
     type: time
     timeframes: [raw, time, date, week, month, quarter, year]
     datatype: datetime
@@ -52,7 +54,7 @@ view: view_indicador_tempo {
   }
 
   dimension_group: data_devolutiva_consultor {
-    label: "Data de retorno do Consultor"
+    label: "Devolvido para Backoffice"
     type: time
     timeframes: [raw, time, date, week, month, quarter, year]
     datatype: datetime
@@ -60,13 +62,18 @@ view: view_indicador_tempo {
   }
 
   dimension_group: data_retorno_cliente {
-    label: "Data de Retorno para o Cliente"
+    label: "Retornado para Cliente"
     type: time
     timeframes: [raw, time, date, week, month, quarter, year]
     datatype: datetime
     sql: ${TABLE}.ComunicacaoCliente ;;
   }
 
+  measure: qtd_casos {
+    label: "Qtd. Casos"
+    type: count_distinct
+    sql: ${parent_case_number}  ;;
+  }
 
   measure: sum_tempo_backoffice {
     label: "Tempo Backoffice"
