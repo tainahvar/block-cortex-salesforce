@@ -44,15 +44,16 @@ view: view_indicador_tempo_detalhes {
   }
 
   dimension: acn_crm_consultant_name__c {
-    label: "Consultor"
+    label: "Consultor Nome"
+    hidden: yes
     type: string
     sql: ${TABLE}.ACN_CRM_ConsultantName__c ;;
   }
 
   dimension: acn_crm_consultant_email__c {
-    label: "Email Consultor"
+    label: "Consultor"
     type: string
-    sql: ${TABLE}.ACN_CRM_ConsultantEmail__c ;;
+    sql: coalesce(${TABLE}.ACN_CRM_ConsultantEmail__c,view_indicador_tempo.consultor) ;;
   }
 
   dimension: acn_crm_portfolio__c {

@@ -25,6 +25,14 @@ view: view_indicador_tempo {
     sql: ${TABLE}.UltimoAtendimento ;;
   }
 
+  dimension: consultor {
+    label: "Consultor"
+    hidden: yes
+    type: string
+    sql: ${TABLE}.Consultor ;;
+  }
+
+
   dimension: status_atual {
     label: "Status"
     type: string
