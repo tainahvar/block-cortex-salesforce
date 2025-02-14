@@ -53,7 +53,7 @@ view: view_indicador_tempo_detalhes {
   dimension: acn_crm_consultant_email__c {
     label: "Consultor"
     type: string
-    sql: coalesce(${TABLE}.ACN_CRM_ConsultantEmail__c,view_indicador_tempo.consultor) ;;
+    sql: Replace(coalesce(${TABLE}.ACN_CRM_ConsultantEmail__c,view_indicador_tempo.consultor),"@equatorialenergia.com.br","") ;;
   }
 
   dimension: acn_crm_portfolio__c {
